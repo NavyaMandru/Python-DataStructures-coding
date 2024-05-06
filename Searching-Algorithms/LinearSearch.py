@@ -12,32 +12,31 @@ Space Complexity: O(1) as except for the variable to iterate through the list, n
 """
 
 
+def linear_search(arry, x, n):
+    for i in range(n):
+        if arry[i] == x:
+            return i
+    return -1
 
-def LinearSearch(arry, x, n):
-  for i in range(n):
-    if arry[i] == x:
-      return i
-  return -1
-  
-if name == "__main__":
-  arru = list()
-  
-  finding_element = int(input("enter the element that you want to find in the list: "))
-  
-  n = int(input("enter no.of elements: "))
 
-  # get the elemets from user and append elements to the list
-  for i in range(n):
-    arry.append(int(input()))
+if __name__ == "__main__":
+    arry = list()
 
-  # functtion call
-  result = LinearSearch(arry,finding_element,n)
+    finding_element = int(input("enter the element that you want to find in the list: "))
 
-  if (result == -1):
-    print("Element not present in the list")
-  else:
-    print("Element present the the index ", result)
+    n = int(input("enter no.of elements: "))
 
-  
+    # get the elements from user and append elements to the list
+    for i in range(n):
+        arry.append(int(input()))
+
+    # function call
+    result = linear_search(arry, finding_element, n)
+
+    if result == -1:
+        print("Element not present in the list")
+    else:
+        print("Element present the the index ", result)
+        
     
 
